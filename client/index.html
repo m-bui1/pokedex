@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pokemon</title>
-    <script src="/js/components/pokemon_list.js"></script>
-    <script defer src="/js/components/sign_up.js"></script>
-    <script defer src="/js/components/login.js"></script>
-    <script src="/js/initialize.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pokemon</title>
+  <script src="/js/components/pokemon_list.js"></script>
+  <script defer src="/js/components/sign_up.js"></script>
+  <script defer src="/js/components/login.js"></script>
+  <script src="/js/initialize.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="index.css">
 
 </head>
+
 <body>
-    <header id="header-container" class="ui inverted segment">
-        <div class="ui inverted secondary menu">
-           <h1 id="header-text">Pokemon</h1>
-        </div>
-    </header>
-    <nav class="header-nav">
-      
-      <ul>
-        <li onClick="renderSignUp()">Sign Up</li>
-        <li onClick="renderLogin()">Log In</li>
-      </ul>
-    </nav>
-    <main id="page" class="content"></main>
-    <div id="container">
-        <div id="poke-container" class="ui cards">
-        </div>
+  <header id="header-container" class="ui inverted segment">
+    <div class="ui inverted secondary menu">
+        <h1 id="header-text">Poke Dex</h1>
     </div>
-
-
+  </header>
+  <nav class="header-nav">
+    <ul>
+      <li onClick="renderSignUp()">Sign Up</li>
+      <li onClick="renderLogin()">Log In</li>
+    </ul>
+  </nav>
+  <main id="page" class="content"></main>
+  <div id="container">
+    <div id="poke-container" class="ui cards">
+    </div>
+  </div>
 </body>
+
 </html>
