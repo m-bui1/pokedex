@@ -845,6 +845,7 @@ img {
 .card-signup {
   max-width: 350px;
   margin: 0 auto;
+  opacity: 0.9;
 }
 
 .card-signup .card-header {

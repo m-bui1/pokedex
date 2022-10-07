@@ -79,5 +79,10 @@ function logout() {
     state.loggedInUserName = undefined;
     let showLoginSignup = document.querySelector("#showLoginSignup");
     showLoginSignup.innerText = "";
+    let usernames = document.querySelector('.userName')
+    usernames.innerText = ''
+    renderEverything()
+    let sprite = document.querySelector('#favourite1')
+    sprite.innerHTML = ``
   });
 }

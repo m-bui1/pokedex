@@ -70,6 +70,16 @@ function renderPokeInfo() {
           eachPokedexEntry.innerText = `${allPokemon.flavor_text_entries[Math.floor(Math.random()* 15)+1].flavor_text}`
           eachPokemon.appendChild(eachPokedexEntry)
       }) 
+      fetch(
+        `https://pokeapi.co/api/v2/pokemon-form/${eachPokemon.id}/`
+      )
+        .then((res) => res.json())
+        .then((fav1) => {
+          let sprite = fav1.sprites.front_shiny;
+          let image = document.createElement("img");
+          image.src = sprite;
+          eachPokedexEntry.appendChild(image);
+        });
     })
   })
 }

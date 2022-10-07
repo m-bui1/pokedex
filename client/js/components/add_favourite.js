@@ -40,7 +40,7 @@ function lockIn() {
           favourites.favPoke = favPoke
           renderFavouritePokemon(form.favourite)
       })
-    }, "2000");
+    }, "500");
   }
 }
 

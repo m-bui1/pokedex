@@ -4,10 +4,10 @@ function renderSignUp() {
 
     <form onSubmit="signUp(event)">
 
-      <div class="section section-signup" style="background-image: url('https://images.unsplash.com/photo-1628968434441-d9c1c66dcde7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9rZW1vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60'); background-size: cover; background-position: top center; min-height: 700px;">
+      <div class="section section-signup" style=" background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cad4b52e-f6b1-432f-9035-a5f4853bcf15/d7i3cm4-dc9f4577-6b7d-4d59-8b46-a15bf5e84209.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NhZDRiNTJlLWY2YjEtNDMyZi05MDM1LWE1ZjQ4NTNiY2YxNVwvZDdpM2NtNC1kYzlmNDU3Ny02YjdkLTRkNTktOGI0Ni1hMTViZjVlODQyMDkuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MAvFmljnNt5yawKRk7Tm-59pAkenmRqY3ZmzVmfsMjI'); background-size: cover; background-position: top center; min-height: 700px;">
         <div class="container">
           <div class="row">
-            <div class="card card-signup" data-background-color="orange">
+            <div class="card card-signup" data-background-color="green">
               <div class="card-header text-center">
                 <h3 class="card-title title-up">Sign Up</h3>
 
@@ -86,6 +86,9 @@ function signUp(event) {
       state.loggedInUserName = userName;
       let showLoginSignup = document.querySelector("#showLoginSignup");
       showLoginSignup.innerText = "";
+      let user_name = document.querySelector(".userName");
+      console.log(user_name);
+      user_name.innerText = state.loggedInUserName;
       renderNavBar();
       renderPokemonList();
       document.querySelector("#page").innerHTML = ``;

@@ -31,3 +31,14 @@ header {
 .favPokemonContainer {
   position: right;
 }
+.userName {
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  top: 6px;
+  right: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+  font-size: large;
+  position: absolute;
+}
