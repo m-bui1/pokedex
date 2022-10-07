@@ -97,7 +97,13 @@ body {
 }
 
 .deleteFav {
-  display: none;
+  height: 27px;
+  width: 80px;
+  top: 100px;
+  right: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+  position: absolute;
 }
 
 #favourite1 {
