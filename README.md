@@ -11,7 +11,7 @@ Features & tech:
 -- if the api request was changed from 151 to 800 it would then display the other 650 pokemon, but this would impact load times and cause errors in processing images etc.
 -- if desired the code can be changed to display even more information other than type, name, id and a flavour text, all that is required is to get the key from the object in the api and then process that information.
 
-# Project live at: https://stark-plains-43613.herokuapp.com/
+# Project live at: https://pokedex-kanto-app.herokuapp.com/
 
 
 ## Process and planning
