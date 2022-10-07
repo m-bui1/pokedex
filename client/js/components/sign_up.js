@@ -86,6 +86,7 @@ function signUp(event) {
       state.loggedInUserName = userName;
       let showLoginSignup = document.querySelector("#showLoginSignup");
       showLoginSignup.innerText = "";
+      renderNavBar();
       renderPokemonList();
       document.querySelector("#page").innerHTML = ``;
     });

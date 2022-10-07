@@ -20,10 +20,12 @@ fetch('/api/sessions')
       state.loggedInUserName = userName
     }
   })
-
-fetch("/api/users/fav1")
+let email = state.loggedInUserName
+fetch(`/api/users/fav1/:${email}`)
   .then(res => res.json())
   .then(favPoke => {
     favourites.favPoke = favPoke
     console.log(favourites.favPoke)
   })
+
+  // should take the favourites table data but instead uses a favourites object that has been defined elsewhere

@@ -4,7 +4,7 @@ function renderNavBar() {
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" onClick="renderEverything()">
-        Samp
+        Home
       </a>
 
       <button
@@ -17,18 +17,6 @@ function renderNavBar() {
       </button>
       <div class="collapse navbar-collapse top_nav" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto ">
-          <li class="nav-item">
-            <a class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link display-3">About Us</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link">Support</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link">Contact Us</a>
-          </li>
         </ul>
         <ul class="navbar navbar-nav navbar-right" style="display:flex;">
           <li class="nav-item ">
@@ -52,7 +40,7 @@ function renderNavBar() {
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" onClick="renderEverything()">
-        Samp
+        Home
       </a>
 
       <button
@@ -65,18 +53,6 @@ function renderNavBar() {
       </button>
       <div class="collapse navbar-collapse top_nav" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto ">
-          <li class="nav-item">
-            <a class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link display-3">About Us</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link">Support</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link">Contact Us</a>
-          </li>
         </ul>
         <ul class="navbar navbar-nav navbar-right" style="display:flex;">
           <li class="nav-item ">
@@ -96,10 +72,12 @@ function renderNavBar() {
 function logout() {
   fetch("/api/sessions", {
     method: "DELETE",
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      console.log(res);
-      state.loggedInUserName = null;
-    });
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(),
+  }).then((res) => {
+    console.log(res);
+    state.loggedInUserName = undefined;
+    let showLoginSignup = document.querySelector("#showLoginSignup");
+    showLoginSignup.innerText = "";
+  });
 }

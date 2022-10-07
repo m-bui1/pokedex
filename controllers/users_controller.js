@@ -7,9 +7,10 @@ const User = require("../models/user");
 
 // routes
 
-router.get('/fav1', (req, res) => {
+router.get('/fav1/:email', (req, res) => {
+  let email = req.params.email
   User
-    .findOne()
+    .findOne(email)
     .then(favPoke => res.json(favPoke))
 })
 

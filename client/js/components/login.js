@@ -65,6 +65,7 @@ function login(event) {
         let showLoginSignup = document.querySelector("#showLoginSignup");
         showLoginSignup.innerText = "";
         renderPokemonList();
+        renderNavBar();
         renderFavouritePokemon();
       }
     });

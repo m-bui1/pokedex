@@ -1,20 +1,106 @@
-.agents-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+html {
+  background-size: cover;
+}
+body {
+  background-image: url("https://files.slack.com/files-pri/T0351JZQ0-F0467MYKQE4/pokemon.png");
+  background-repeat: repeat-x;
+  background-position: cover;
+  margin-top: -100px;
+
 }
 
-.agent {
-  text-align: center;
-  border: 1px solid rgb(106, 157, 228);
-  padding: 0 1rem;
-  box-shadow: 3px 3px 3px rgb(106, 157, 228);
-  background-color: lightblue;
-  opacity: 0.7;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.ui-cards {
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 100% 100% 100%; 
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 260px;
+}
+
+.ui-cards img {
+  width: auto;
+  height: 120px;
+  padding: 10px;
+  float: right;
+  padding-top: 20px;
+}
+
+.ui-cards h4{
+  font-size: 20px;
+  text-transform: capitalize;
+  position: absolute;
+  padding: 10px;
+  align-self: left;
+  margin-left: 36px;
+}
+
+.ui-cards p {
+  padding: 10px;
+  position: absolute;
+  font-size: 15px;
+}
+
+.ui-cards li {
+  position: relative;
+  font-size: 15px;
+  margin-top: -50px;
+  list-style-type: none;
+  margin-left: -20px;
 }
 
 .image {
-  max-width: 100%;
-  max-height: 100%;
-  opacity: 1;
+  width: auto;
+  height: 120px;
+  z-index: 2;
+}
+
+#container{
+  background-color: none;
+  margin-top: -20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.favButton {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border-color: white;
+  border-style: none;
+  text-align: left;
+  z-index: 4;
+}
+.favouritePokemon {
+  width: 50px;
+  height: 50px;
+}
+
+.trainerID {
+  float: right;
+}
+
+.lockin {
+  height: 40px;
+  width: 100px;
+  top: 60px;
+  right: 10px;
+  border-radius: 10px;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.deleteFav {
+  display: none;
+}
+
+#favourite1 {
+  margin-top: 50px;
+  margin-left: 10px;
+  height: 60px;
+  width: 60px;
 }

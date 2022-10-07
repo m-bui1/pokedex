@@ -2,9 +2,12 @@
   display: inline-block;
   position: right;
   border: 1px solid black;
-  height: 100px;
-  width: 400px;
+  height: 150px;
+  width: 245px;
   background-color: lightblue;
+  background-image: url("https://xf-assets.pokecharms.com/data/attachment-files/2015/03/180530_Ghost.png");
+  background-size: cover;
+  border-radius: 10px;
 }
 header {
   display: flex;
@@ -17,12 +20,14 @@ header {
 }
 
 .favouritePokemon {
-  width: 10px;
-  height: 10px;
+  font-size: 0;
+  width: 8px;
+  height: 8px;
   background-color: lightgreen;
+  opacity: .7;
   border: green;
+  border-radius: 10px;
 }
 .favPokemonContainer {
   position: right;
-  display: grid;
 }

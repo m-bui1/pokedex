@@ -3,7 +3,7 @@ function lockIn() {
   if (state.loggedInUserName) {
     var form;
 
-    let favourite = document.querySelector("#favourite1");
+    let favourite1 = document.querySelector("#favourite1");
     let favourite2 = document.querySelector("#favourite2");
     let favourite3 = document.querySelector("#favourite3");
     let favourite4 = document.querySelector("#favourite4");
@@ -12,13 +12,13 @@ function lockIn() {
     let email = state.loggedInUserName;
 
     form = {
-      favourite: favourite.innerText,
-      favourite1: favourite1.innerText,
-      favourite2: favourite2.innerText,
-      favourite3: favourite3.innerText,
-      favourite4: favourite4.innerText,
-      favourite5: favourite5.innerText,
-      favourite6: favourite6.innerText,
+      favourite: favourite1.innerText,
+      // favourite1: favourite1.innerText,
+      // favourite2: favourite2.innerText,
+      // favourite3: favourite3.innerText,
+      // favourite4: favourite4.innerText,
+      // favourite5: favourite5.innerText,
+      // favourite6: favourite6.innerText,
       email: state.loggedInUserName,
     };
     console.log(form);
@@ -30,12 +30,15 @@ function lockIn() {
       body: JSON.stringify(form),
     });
     setTimeout(() => {
-      fetch("/api/users/fav1")
-      .then(res => res.json())
-      .then(favPoke => {
-        favourites.favPoke = favPoke
-        console.log(favourites.favPoke)
-        renderFavouritePokemon()
+      fetch(`/api/users/fav1/:${email}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(),
+      })
+        .then(res => res.json())
+        .then(favPoke => {
+          favourites.favPoke = favPoke
+          renderFavouritePokemon(form.favourite)
       })
     }, "2000");
   }
