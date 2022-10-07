@@ -15,6 +15,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> -->
   <!-- <link rel="stylesheet" href="index.css"> -->
   <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/pokemon.css">
 
   <link rel="stylesheet" href="./css/signup.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
@@ -38,18 +39,22 @@
 
 <body>
   <header>
-    <span class="title">Pokemon</span>
-    <div class="trainerCard"> Username:
-      Trainer ID:
+    <audio controls>
+      <source src="./song.mp3" type="audio/mpeg">
+    </audio>
+    <span class="title"><img src='https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png'></span>
+    <div class="trainerCard">
+      <div class="userName"></div>
+      <p class="trainerID"><p> 
       <button onClick="lockIn()" class="lockin">Lock In</button>
       <div class="avatar"></div>
       <div class="favPokemonContainer">
         <div class="favouritePokemon" id="favourite1"></div>
-        <div class="favouritePokemon" id="favourite2"></div>
+        <!-- <div class="favouritePokemon" id="favourite2"></div>
         <div class="favouritePokemon" id="favourite3"></div>
         <div class="favouritePokemon" id="favourite4"></div>
         <div class="favouritePokemon" id="favourite5"></div>
-        <div class="favouritePokemon" id="favourite6"></div>
+        <div class="favouritePokemon" id="favourite6"></div> -->
       </div>
     </div>
   </header>
@@ -64,7 +69,13 @@
     <div id="poke-container" class="ui-cards">
     </div>
   </div>
-
+  <div class="vid">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BoZ0Zwab6Oc" frameborder="0"
+    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/shUkq1sfSyU" title="Pokemon Emerald Opening" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UCgLQc3ODpY" frameborder="0"
+  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 </body>
 
 </html>

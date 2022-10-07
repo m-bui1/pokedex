@@ -1,10 +1,10 @@
 const db = require("../db/db");
 
 const User = {
-  findOne: () => {
-    const sql = 'SELECT favourite FROM favourites'
+  findOne: (email) => {
+    const sql = 'SELECT favourite FROM favourites WHERE email = $1'
     return db
-      .query(sql)
+      .query(sql, [email])
       .then(dbRes => dbRes.rows)
   },
   create: (

@@ -14,7 +14,9 @@ router.get("/", (req, res) => {
 });
 
 router.delete("/", (req, res) => {
-  req.session.cookie = null;
+  // req.session.cookie = null;
+  req.session.userId = undefined;
+  res.json({ error: "aaaaaaaa" });
 });
 
 router.post("/", (req, res) => {

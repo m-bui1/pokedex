@@ -14,9 +14,9 @@ function renderEverything() {
   }, "1000");
 }
 
-function renderFavouritePokemon() {
+function renderFavouritePokemon(pokemon) {
   fetch(
-    `https://pokeapi.co/api/v2/pokemon-form/${favourites.favPoke[0]['favourite']}/`
+    `https://pokeapi.co/api/v2/pokemon-form/${pokemon}/`
   )
     .then((res) => res.json())
     .then((fav1) => {
@@ -70,6 +70,16 @@ function renderPokeInfo() {
           eachPokedexEntry.innerText = `${allPokemon.flavor_text_entries[Math.floor(Math.random()* 15)+1].flavor_text}`
           eachPokemon.appendChild(eachPokedexEntry)
       }) 
+      fetch(
+        `https://pokeapi.co/api/v2/pokemon-form/${eachPokemon.id}/`
+      )
+        .then((res) => res.json())
+        .then((fav1) => {
+          let sprite = fav1.sprites.front_shiny;
+          let image = document.createElement("img");
+          image.src = sprite;
+          eachPokedexEntry.appendChild(image);
+        });
     })
   })
 }
@@ -108,7 +118,7 @@ function renderPokemon(pokeData) {
   let favButton = document.createElement("button");
   favButton.className = "favButton";
   favButton.id = `${pokeData.name}`;
-  favButton.innerText = "Favourite";
+  favButton.innerText = "⭐";
 
   createTypes(pokeData.types, pokeTypes);
 
@@ -130,6 +140,41 @@ function createTypes(types, ul) {
   types.forEach((type) => {
     let typeLi = document.createElement("li");
     typeLi.innerText = type["type"]["name"];
+    if (typeLi.innerText == 'poison'){
+      typeLi.style.backgroundColor = '#a040a0'
+    } else if (typeLi.innerText == 'grass'){
+      typeLi.style.backgroundColor = '#78c850'
+    } else if (typeLi.innerText == 'fire'){
+      typeLi.style.backgroundColor = '#f08030'
+    } else if (typeLi.innerText == 'flying'){
+      typeLi.style.backgroundColor = '#a890f0'
+    } else if (typeLi.innerText == 'water'){
+      typeLi.style.backgroundColor = '#6890f0'
+    } else if (typeLi.innerText == 'bug'){
+      typeLi.style.backgroundColor = '#a8b820'
+    } else if (typeLi.innerText == 'normal'){
+      typeLi.style.backgroundColor = '#a8a878'
+    } else if (typeLi.innerText == 'electric'){
+      typeLi.style.backgroundColor = '#f8d030'
+    } else if (typeLi.innerText == 'ground'){
+      typeLi.style.backgroundColor = '#e0c068'
+    } else if (typeLi.innerText == 'fairy'){
+      typeLi.style.backgroundColor = '#ee99ac'
+    } else if (typeLi.innerText == 'fighting'){
+      typeLi.style.backgroundColor = '#c02038'
+    } else if (typeLi.innerText == 'psychic'){
+      typeLi.style.backgroundColor = '#f85888'
+    } else if (typeLi.innerText == 'steel'){
+      typeLi.style.backgroundColor = '#b8a038'
+    } else if (typeLi.innerText == 'ice'){
+      typeLi.style.backgroundColor = '#98d8d8'
+    } else if (typeLi.innerText == 'ghost'){
+      typeLi.style.backgroundColor = '#705898'
+    } else if (typeLi.innerText == 'dragon'){
+      typeLi.style.backgroundColor = '#7038f8'
+    } else {
+      console.log('type colouring error')
+    }
     ul.append(typeLi);
   });
 }
