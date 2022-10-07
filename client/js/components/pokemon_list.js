@@ -31,13 +31,13 @@ function renderFavouritePokemon(pokemon) {
 function deleteButton() {
   let button = document.createElement("button");
   let trainerCard = document.querySelector(".trainerCard");
+  let pokeSprite = document.querySelector("#favourite1")
   button.textContent = "Delete";
   button.className = "deleteFav";
   trainerCard.appendChild(button);
   button.addEventListener("click", (event) => {
     var email = state.loggedInUserName;
-    console.log(email);
-    deleteFavourite(email);
+    pokeSprite.innerHTML = ''
   });
 }
 
